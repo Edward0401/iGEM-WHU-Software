@@ -1,0 +1,6 @@
+#For 5bp sequence
+blastn -query .\in.blasta -db ecoli -task blastn-short -word_size 4 -evalue 6850 -outfmt 6 -out out.tsv
+#For 10bp sequence
+blastn -query .\in.blasta -db ecoli -task blastn-short -word_size 4 -evalue 1000 -outfmt 6 -out out.tsv
+#For 20bp sequence 只输出重复数目卡在10bp以上的
+blastn -query .\test.blasta -db ecoli -task blastn-short -word_size 4 -evalue 440
